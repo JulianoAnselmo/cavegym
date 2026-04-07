@@ -2,7 +2,17 @@ node_modules/
 .superpowers/
 package-lock.json
 upscale.html
+
+# Temp/original images (keep only renamed HQ versions)
+assets/images/2025-*.webp
 assets/images/*.webp
-assets/images/*.jpg
 assets/images/*-hq.jpg
 assets/images/hero-hq.png~*
+assets/images/6b41b357-*.png
+assets/images/8d0b9740-*.png
+assets/images/950cf196-*.png
+assets/images/ac6f8023-*.png
+assets/images/b9a128df-*.png
+assets/images/WhatsApp*.jpeg
+assets/images/*.png
+!assets/images/*-hq.png
