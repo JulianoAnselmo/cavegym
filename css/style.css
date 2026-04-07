@@ -474,7 +474,7 @@ body.cursor-hover .cursor-follower {
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(48px, 10vw, 120px);
+  font-size: clamp(32px, 9vw, 120px);
   line-height: 0.9;
   color: var(--white);
   letter-spacing: 6px;
@@ -1248,7 +1248,64 @@ body::after {
 }
 
 
+/* ===== HOVER GUARD — desktop only ===== */
+@media (hover: hover) {
+  .diff:hover { background: var(--black-3); }
+  .unit:hover { border-color: rgba(220,38,38,0.3); transform: translateY(-4px); }
+  .unit:hover .unit__img img { filter: brightness(0.95) contrast(1.1); transform: scale(1.04); }
+  .test-card:hover { border-color: rgba(220,38,38,0.2); transform: translateY(-4px); }
+  .plan:hover { background: var(--black-3); }
+  .mod-card:hover { border-color: var(--red); transform: translateY(-6px); }
+  .mod-card:hover .mod-card__bg { filter: brightness(0.55) saturate(1); transform: scale(1.05); }
+  .mod-card:hover p { opacity: 1; transform: translateY(0); }
+  .gallery__item:hover img { filter: brightness(1) contrast(1.1); transform: scale(1.06); }
+  .btn--glow:hover { transform: translateY(-2px); box-shadow: 0 0 50px var(--red-glow); }
+  .btn--glow:hover::before { opacity: 1; }
+  .btn--ghost:hover::before { transform: scaleX(1); transform-origin: left; }
+  .btn--ghost:hover { color: var(--black); }
+  .btn--ghost:hover span { color: var(--black); }
+  .faq__q:hover { color: var(--red); }
+  .header__nav a:hover { color: var(--white); }
+  .header__cta:hover { background: var(--red); color: var(--white); }
+  .footer__social a:hover { color: var(--red); }
+  .footer__col a:hover { color: var(--red); }
+  .mobile-menu__nav a:hover { color: var(--red); }
+}
+
+/* ===== TOUCH — reset sticky hovers + active feedback ===== */
+@media (hover: none) {
+  /* Reset all sticky hover states on touch */
+  .diff:hover,
+  .plan:hover { background: inherit; }
+  .unit:hover,
+  .test-card:hover,
+  .mod-card:hover { transform: none; border-color: var(--border); }
+  .mod-card:hover .mod-card__bg { filter: brightness(0.45) saturate(0.85); transform: none; }
+  .gallery__item:hover img { filter: brightness(0.85) contrast(1.05); transform: none; }
+  .unit:hover .unit__img img { filter: brightness(0.8) contrast(1.05); transform: none; }
+  .btn--glow:hover { transform: none; box-shadow: 0 0 30px var(--red-glow); }
+  .btn--ghost:hover { color: var(--white); }
+  .btn--ghost:hover::before { transform: scaleX(0); }
+  .btn--ghost:hover span { color: var(--white); }
+  .wpp-float:hover { transform: none; }
+
+  /* Active states for tap feedback */
+  .btn--glow:active { transform: scale(0.97); opacity: 0.9; }
+  .btn--ghost:active { background: rgba(255,255,255,0.08); }
+  .mod-card:active { border-color: var(--red); transform: scale(0.98); }
+  .faq__q:active { color: var(--red); }
+  .wpp-float:active { transform: scale(0.92); }
+  .unit:active { border-color: rgba(220,38,38,0.3); }
+  .test-card:active { border-color: rgba(220,38,38,0.2); }
+
+  /* Show descriptions always on touch since no hover */
+  .mod-card p { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ===== RESPONSIVE ===== */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .brand { grid-template-columns: 1fr; gap: 48px; }
   .diff-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1260,23 +1317,110 @@ body::after {
   .footer__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
 }
 
+/* Small tablet / large phone */
 @media (max-width: 768px) {
   .section { padding: 80px 0; }
+  .section-head { margin-bottom: 48px; }
   .diff-grid { grid-template-columns: 1fr; }
+  .diff { padding: 28px 20px; }
   .hero__actions { flex-direction: column; align-items: center; }
-  .hero__actions .btn { width: 100%; max-width: 300px; }
+  .hero__actions .btn { width: 100%; max-width: 320px; }
   .unit__ctas { flex-direction: column; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .gallery__item--lg { grid-column: span 2; aspect-ratio: 2/1; }
   .mod-card { height: 300px; }
   .footer__grid { grid-template-columns: 1fr; }
+  .footer__cta { padding: 64px 0 56px; }
+  .marquee__track span { font-size: clamp(14px, 3vw, 18px); letter-spacing: 4px; }
+  .marquee__track { gap: 24px; }
 }
 
+/* Phone */
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
-  .header { padding: 16px; }
+  .header { padding: 14px 16px; }
+  .section { padding: 60px 0; }
+  .section-head { margin-bottom: 36px; }
+
+  .hero__stars { font-size: 14px; letter-spacing: 8px; }
+  .hero__title { letter-spacing: 3px; margin-bottom: 20px; }
+  .hero__sub { font-size: 14px; margin-bottom: 32px; }
+
   .gallery { grid-template-columns: 1fr; }
   .gallery__item--lg { grid-column: span 1; aspect-ratio: 16/9; }
+  .gallery__item { aspect-ratio: 16/10; }
+
+  .mod-card { height: 280px; padding: 20px; }
+  .mod-card h3 { font-size: 22px; }
+
+  .diff { padding: 24px 16px; }
+  .diff__num { font-size: 36px; }
+  .diff__title { font-size: 13px; }
+
+  .unit__info { padding: 20px; }
+  .unit__info h3 { font-size: 22px; }
+
+  .test-card { padding: 24px; }
+
+  .plan { padding: 32px 20px; }
+  .plan h3 { font-size: 28px; }
+
+  .footer__cta { padding: 48px 0 40px; }
+  .footer__logo { font-size: clamp(22px, 6vw, 32px); }
+  .footer__grid { gap: 24px; padding: 40px 0; }
+
+  .wpp-float { bottom: 16px; right: 16px; width: 52px; height: 52px; }
+
+  .mobile-menu__nav a { font-size: clamp(26px, 7vw, 36px); }
+}
+
+/* Small phone (iPhone SE, older Android) */
+@media (max-width: 375px) {
+  .container { padding: 0 12px; }
+  .header { padding: 12px; }
+  .section { padding: 48px 0; }
+
+  .hero__title { letter-spacing: 2px; }
+  .hero__sub { font-size: 13px; }
+  .hero__actions .btn { padding: 14px 24px; font-size: 12px; }
+
+  .heading-lg { letter-spacing: 1px; }
+  .body-lg { font-size: 15px; line-height: 1.7; }
+
+  .mod-card { height: 260px; padding: 16px; }
+  .mod-card h3 { font-size: 20px; }
+
+  .gallery__item { aspect-ratio: 4/3; }
+
+  .btn--sm { padding: 10px 16px; font-size: 10px; }
+
+  .unit__ctas .btn { font-size: 10px; }
+}
+
+/* Landscape phone */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero { min-height: 100vh; }
+  .hero__title { font-size: clamp(28px, 6vw, 60px); }
+  .hero__sub { display: none; }
+  .hero__scroll { display: none; }
+  .section { padding: 48px 0; }
+
+  .mobile-menu { overflow-y: auto; }
+  .mobile-menu__nav a { font-size: 24px; }
+}
+
+/* Burger tap target fix */
+.header__burger {
+  min-width: 44px;
+  min-height: 44px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .header__nav, .header__cta { display: none; }
+  .header__burger { display: flex; }
 }
 
 /* Reduced motion */

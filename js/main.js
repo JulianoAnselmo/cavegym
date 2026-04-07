@@ -95,8 +95,9 @@
       }
     }
 
-    // Create particles
-    const particleCount = Math.min(60, Math.floor(w / 25));
+    // Create particles — fewer on mobile for performance
+    const isMobile = w < 768;
+    const particleCount = isMobile ? Math.min(15, Math.floor(w / 30)) : Math.min(60, Math.floor(w / 25));
     for (let i = 0; i < particleCount; i++) {
       const p = new Ember();
       p.y = Math.random() * h; // Start scattered
@@ -191,9 +192,9 @@
   });
 
 
-  // ===== HERO PARALLAX =====
+  // ===== HERO PARALLAX (desktop only — causes jank on mobile) =====
   const heroContent = document.querySelector('.hero__content');
-  if (heroContent) {
+  if (heroContent && window.matchMedia('(hover: hover)').matches) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight) {
