@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#0A0A0A"/>
+  <text x="32" y="20" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="8" fill="#DC2626" letter-spacing="1">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-style="italic" font-size="16" fill="#DC2626" letter-spacing="1">CAVE</text>
+  <text x="32" y="54" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-style="italic" font-size="16" fill="#FFFFFF" letter-spacing="1">GYM</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "name": "cave-gym",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.97",
+    "jimp": "^0.22.12",
+    "sharp": "^0.34.5",
+    "webp-converter": "^2.3.3"
+  }
+}

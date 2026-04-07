@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cave Gym | Academia Premium em Catanduva e Taquaritinga</title>
+  <meta name="description" content="Cave Gym - Onde o novo voce e forjado. Academia premium com musculacao, funcional, lutas e mais. Unidades em Catanduva e Taquaritinga.">
+
+  <meta property="og:title" content="Cave Gym | Academia Premium em Catanduva e Taquaritinga">
+  <meta property="og:description" content="Onde o novo voce e forjado. Duas unidades. Mais de 10 modalidades. Estrutura de ponta.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cavegym.com.br">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cave Gym Catanduva",
+    "description": "Academia premium em Catanduva",
+    "telephone": "+5517997746465",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Dep. Orlando Zancaner, 1051 - Jardim Amendola",
+      "addressLocality": "Catanduva",
+      "addressRegion": "SP",
+      "postalCode": "15801-120",
+      "addressCountry": "BR"
+    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "20" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cave Gym Taquaritinga",
+    "telephone": "+5517997746465",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua General Osorio, 444 - Centro",
+      "addressLocality": "Taquaritinga",
+      "addressRegion": "SP",
+      "postalCode": "15900-013",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Como funciona a matricula?","acceptedAnswer":{"@type":"Answer","text":"A matricula pode ser feita presencialmente ou pelo WhatsApp. Planos semestrais e anuais disponiveis."}},
+      {"@type":"Question","name":"Posso fazer aula experimental?","acceptedAnswer":{"@type":"Answer","text":"Sim! Agende pelo WhatsApp ou visite uma de nossas unidades."}},
+      {"@type":"Question","name":"Quais os horarios?","acceptedAnswer":{"@type":"Answer","text":"Seg a Sex 05h-23h, Sab 08h-13h em ambas as unidades."}},
+      {"@type":"Question","name":"Qual a diferenca entre as unidades?","acceptedAnswer":{"@type":"Answer","text":"Ambas oferecem a mesma experiencia premium com estrutura completa e todas as modalidades."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <span class="loader__text" data-text="CAVE">CAVE</span>
+      <span class="loader__text loader__text--accent" data-text="GYM">GYM</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="#" class="header__logo">
+      <span class="logo-c">CAVE</span><span class="logo-g">GYM</span>
+    </a>
+    <nav class="header__nav" id="headerNav">
+      <a href="#marca">A Cave</a>
+      <a href="#modalidades">Modalidades</a>
+      <a href="#unidades">Unidades</a>
+      <a href="#planos">Planos</a>
+    </nav>
+    <a href="https://wa.me/5517997746465?text=Quero%20saber%20mais%20sobre%20a%20Cave%20Gym" class="header__cta" target="_blank" rel="noopener">MATRICULE-SE</a>
+    <button class="header__burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__nav">
+      <a href="#marca" data-mobile-link>A CAVE</a>
+      <a href="#diferenciais" data-mobile-link>DIFERENCIAIS</a>
+      <a href="#modalidades" data-mobile-link>MODALIDADES</a>
+      <a href="#estrutura" data-mobile-link>ESTRUTURA</a>
+      <a href="#unidades" data-mobile-link>UNIDADES</a>
+      <a href="#planos" data-mobile-link>PLANOS</a>
+      <a href="#faq" data-mobile-link>FAQ</a>
+    </nav>
+    <a href="https://wa.me/5517997746465?text=Quero%20me%20matricular" class="mobile-menu__cta" target="_blank" rel="noopener">FALAR NO WHATSAPP</a>
+  </div>
+
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-img"></div>
+    <canvas class="hero__particles" id="heroParticles"></canvas>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <div class="hero__stars" data-reveal>&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+      <h1 class="hero__title" data-reveal>
+        <span class="hero__line">ONDE O NOVO</span>
+        <span class="hero__line">VOC&Ecirc; &Eacute; <em>FORJADO.</em></span>
+      </h1>
+      <p class="hero__sub" data-reveal>A maior academia do interior paulista. Duas unidades.<br>Uma miss&atilde;o: <strong>sua evolu&ccedil;&atilde;o.</strong></p>
+      <div class="hero__actions" data-reveal>
+        <a href="https://wa.me/5517997746465?text=Quero%20agendar%20uma%20visita" class="btn btn--glow" target="_blank" rel="noopener">
+          <span>AGENDAR VISITA</span>
+        </a>
+        <a href="https://wa.me/5517997746465?text=Quero%20saber%20mais" class="btn btn--ghost" target="_blank" rel="noopener">
+          <span>FALAR NO WHATSAPP</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>SCROLL</span>
+    </div>
+  </section>
+
+
+  <!-- ===== 2. MARCA ===== -->
+  <section class="section" id="marca">
+    <div class="container">
+      <div class="brand">
+        <div class="brand__text" data-reveal>
+          <span class="eyebrow">QUEM SOMOS</span>
+          <h2 class="heading-xl">N&Atilde;O &Eacute; S&Oacute; UMA<br>ACADEMIA.<br>&Eacute; UMA <em>FORJA.</em></h2>
+          <div class="red-line"></div>
+          <p class="body-lg">Na Cave, a verdadeira transforma&ccedil;&atilde;o nasce no confronto com os pr&oacute;prios limites. Cada treino &eacute; uma batalha interna. Cada gota de suor, um marco de conquista.</p>
+          <p class="body-lg">Aqui, corpo, mente e disciplina se fundem em um &uacute;nico prop&oacute;sito: forjar a melhor vers&atilde;o de voc&ecirc;.</p>
+          <p class="body-lg body-lg--accent"><strong>Na Cave, n&atilde;o apenas treinamos. Forjamos pessoas.</strong></p>
+        </div>
+        <div class="brand__image" data-reveal>
+          <div class="brand__img-wrap">
+            <img src="assets/images/wide-hq.png" alt="Ambiente Cave Gym" loading="lazy">
+            <div class="brand__img-border"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 3. DIFERENCIAIS ===== -->
+  <section class="section section--alt" id="diferenciais">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">POR QUE A CAVE</span>
+        <h2 class="heading-lg">CONSTRU&Iacute;DA PARA<br>QUEM LEVA A S&Eacute;RIO.</h2>
+      </div>
+      <div class="diff-grid" data-reveal-stagger>
+        <div class="diff">
+          <div class="diff__num">01</div>
+          <h3 class="diff__title">ESTRUTURA DE PONTA</h3>
+          <p>Mais de 2.000m&sup2; com equipamentos de &uacute;ltima gera&ccedil;&atilde;o projetados para performance m&aacute;xima.</p>
+        </div>
+        <div class="diff">
+          <div class="diff__num">02</div>
+          <h3 class="diff__title">EQUIPE ESPECIALIZADA</h3>
+          <p>Profissionais dedicados a guiar cada etapa da sua evolu&ccedil;&atilde;o com precis&atilde;o e m&eacute;todo.</p>
+        </div>
+        <div class="diff">
+          <div class="diff__num">03</div>
+          <h3 class="diff__title">ALTA PERFORMANCE</h3>
+          <p>Energia, foco e intensidade em cada cent&iacute;metro. Aqui, mediocridade n&atilde;o entra.</p>
+        </div>
+        <div class="diff">
+          <div class="diff__num">04</div>
+          <h3 class="diff__title">&Aacute;REA KIDS</h3>
+          <p>Espa&ccedil;o seguro e supervisionado para seus filhos enquanto voc&ecirc; treina com tranquilidade.</p>
+        </div>
+        <div class="diff">
+          <div class="diff__num">05</div>
+          <h3 class="diff__title">COMUNIDADE FORTE</h3>
+          <p>Mais de 14 mil pessoas conectadas por disciplina, prop&oacute;sito e vontade de evoluir.</p>
+        </div>
+        <div class="diff">
+          <div class="diff__num">06</div>
+          <h3 class="diff__title">RESULTADOS REAIS</h3>
+          <p>Metodologia que transforma corpo e mente com consist&ecirc;ncia e acompanhamento cont&iacute;nuo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== STATS MARQUEE ===== -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>2 UNIDADES</span><span class="marquee__dot"></span>
+      <span>10+ MODALIDADES</span><span class="marquee__dot"></span>
+      <span>14.000+ COMUNIDADE</span><span class="marquee__dot"></span>
+      <span>4.8 &#9733; GOOGLE</span><span class="marquee__dot"></span>
+      <span>2 UNIDADES</span><span class="marquee__dot"></span>
+      <span>10+ MODALIDADES</span><span class="marquee__dot"></span>
+      <span>14.000+ COMUNIDADE</span><span class="marquee__dot"></span>
+      <span>4.8 &#9733; GOOGLE</span><span class="marquee__dot"></span>
+      <span>2 UNIDADES</span><span class="marquee__dot"></span>
+      <span>10+ MODALIDADES</span><span class="marquee__dot"></span>
+      <span>14.000+ COMUNIDADE</span><span class="marquee__dot"></span>
+      <span>4.8 &#9733; GOOGLE</span><span class="marquee__dot"></span>
+    </div>
+  </div>
+
+
+  <!-- ===== 4. MODALIDADES ===== -->
+  <section class="section" id="modalidades">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">MODALIDADES</span>
+        <h2 class="heading-lg">ENCONTRE O TREINO QUE<br>VAI TE LEVAR AO <em>PR&Oacute;XIMO N&Iacute;VEL.</em></h2>
+      </div>
+    </div>
+    <div class="mod-scroll" data-reveal>
+      <div class="mod-track">
+        <div class="mod-card" style="--img: url('assets/images/dumbbells-hq.png')">
+          <span class="mod-card__cat">FOR&Ccedil;A</span>
+          <h3>MUSCULA&Ccedil;&Atilde;O</h3>
+          <p>Hipertrofia e for&ccedil;a com equipamentos de ponta.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/wide-hq.png')">
+          <span class="mod-card__cat">PERFORMANCE</span>
+          <h3>FUNCIONAL</h3>
+          <p>For&ccedil;a, resist&ecirc;ncia e agilidade integradas.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/hero-hq.png')">
+          <span class="mod-card__cat">LUTA</span>
+          <h3>JIU-JITSU</h3>
+          <p>T&eacute;cnica, disciplina e condicionamento completo.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/cardio-hq.png')">
+          <span class="mod-card__cat">LUTA</span>
+          <h3>MUAY THAI</h3>
+          <p>For&ccedil;a, t&eacute;cnica e supera&ccedil;&atilde;o pessoal.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/treadmills-hq.png')">
+          <span class="mod-card__cat">PERFORMANCE</span>
+          <h3>SPINNER</h3>
+          <p>Ciclismo indoor de alta intensidade.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/hero-hq.png')">
+          <span class="mod-card__cat">PERFORMANCE</span>
+          <h3>JUMP</h3>
+          <p>Energia pura e queima cal&oacute;rica intensa.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/wide-hq.png')">
+          <span class="mod-card__cat">MOVIMENTO</span>
+          <h3>DAN&Ccedil;A</h3>
+          <p>Ritmo, express&atilde;o e liberdade corporal.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/cardio-hq.png')">
+          <span class="mod-card__cat">FOR&Ccedil;A</span>
+          <h3>PREP. F&Iacute;SICA</h3>
+          <p>Performance m&aacute;xima para atletas.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/treadmills-hq.png')">
+          <span class="mod-card__cat">MOVIMENTO</span>
+          <h3>PILATES</h3>
+          <p>Fortalecimento profundo e flexibilidade.</p>
+        </div>
+        <div class="mod-card" style="--img: url('assets/images/dumbbells-hq.png')">
+          <span class="mod-card__cat">MOVIMENTO</span>
+          <h3>FUNC. KIDS</h3>
+          <p>Desenvolvimento motor com divers&atilde;o.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 5. ESTRUTURA / GALERIA ===== -->
+  <section class="section section--alt" id="estrutura">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">NOSSO ESPA&Ccedil;O</span>
+        <h2 class="heading-lg">CONHE&Ccedil;A A <em>CAVERNA.</em></h2>
+        <p class="body-lg" style="max-width:500px">Mais de 2.000m&sup2; projetados para sua evolu&ccedil;&atilde;o.</p>
+      </div>
+    </div>
+    <div class="gallery" data-reveal>
+      <div class="gallery__item gallery__item--lg">
+        <img src="assets/images/hero-hq.png" alt="Cave Gym - Letreiro neon e equipamentos" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/dumbbells-hq.png" alt="Halteres Cave Gym" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/cardio-hq.png" alt="Area cardio com neon" loading="lazy">
+      </div>
+      <div class="gallery__item gallery__item--lg">
+        <img src="assets/images/treadmills-hq.png" alt="Esteiras Cave Gym" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/wide-hq.png" alt="Vista ampla Cave Cardio" loading="lazy">
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/dumbbells-hq.png" alt="Halteres Cave Gym" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 6. UNIDADES ===== -->
+  <section class="section" id="unidades">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">NOSSAS UNIDADES</span>
+        <h2 class="heading-lg">DUAS CAVERNAS.<br>A MESMA <em>ESS&Ecirc;NCIA.</em></h2>
+      </div>
+      <div class="units" data-reveal-stagger>
+        <div class="unit">
+          <div class="unit__img">
+            <img src="assets/images/hero-hq.png" alt="Cave Gym Catanduva" loading="lazy">
+            <div class="unit__badge">CATANDUVA</div>
+          </div>
+          <div class="unit__info">
+            <h3>CAVE GYM <em>CATANDUVA</em></h3>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Av. Dep. Orlando Zancaner, 1051<br>Jardim Am&ecirc;ndola, Catanduva - SP
+            </div>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              Seg-Sex 05h &agrave;s 23h &bull; S&aacute;b 08h &agrave;s 13h
+            </div>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (17) 99774-6465
+            </div>
+            <div class="unit__ctas">
+              <a href="https://wa.me/5517997746465?text=Quero%20agendar%20visita%20em%20Catanduva" class="btn btn--glow btn--sm" target="_blank" rel="noopener"><span>AGENDAR VISITA</span></a>
+              <a href="https://www.google.com/maps/dir//Av.+Dep.+Orlando+Zancaner,+1051+-+Jardim+Amendola,+Catanduva+-+SP" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><span>COMO CHEGAR</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="unit">
+          <div class="unit__img">
+            <img src="assets/images/treadmills-hq.png" alt="Cave Gym Taquaritinga" loading="lazy">
+            <div class="unit__badge">TAQUARITINGA</div>
+          </div>
+          <div class="unit__info">
+            <h3>CAVE GYM <em>TAQUARITINGA</em></h3>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Rua General Os&oacute;rio, 444<br>Centro, Taquaritinga - SP
+            </div>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+              Seg-Sex 05h &agrave;s 23h &bull; S&aacute;b 08h &agrave;s 13h
+            </div>
+            <div class="unit__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              (17) 99774-6465
+            </div>
+            <div class="unit__ctas">
+              <a href="https://wa.me/5517997746465?text=Quero%20agendar%20visita%20em%20Taquaritinga" class="btn btn--glow btn--sm" target="_blank" rel="noopener"><span>AGENDAR VISITA</span></a>
+              <a href="https://www.google.com/maps/dir//Rua+General+Osorio,+444+-+Centro,+Taquaritinga+-+SP" class="btn btn--ghost btn--sm" target="_blank" rel="noopener"><span>COMO CHEGAR</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 7. DEPOIMENTOS ===== -->
+  <section class="section section--alt" id="depoimentos">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">PROVA SOCIAL</span>
+        <h2 class="heading-lg">QUEM TREINA, <em>RECOMENDA.</em></h2>
+      </div>
+      <div class="testimonials" data-reveal-stagger>
+        <div class="test-card">
+          <div class="test-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Melhor academia. Aparelhos top, limpa, espa&ccedil;o amplo, atendimento personalizado!&rdquo;</p>
+          <div class="test-card__author">
+            <div class="test-card__avatar">NR</div>
+            <div><strong>Nathalia Ramos</strong><br><span>Catanduva</span></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="test-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;Top! Estrutura incr&iacute;vel e equipe nota 10. Vai ser meu novo parque de divers&otilde;es.&rdquo;</p>
+          <div class="test-card__author">
+            <div class="test-card__avatar">SC</div>
+            <div><strong>Silvana Clara</strong><br><span>Catanduva</span></div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="test-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>&ldquo;O lema que guia esse lugar resume tudo. Ambiente incrivel, energia contagiante.&rdquo;</p>
+          <div class="test-card__author">
+            <div class="test-card__avatar">B</div>
+            <div><strong>Ben</strong><br><span>Catanduva</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 8. PLANOS ===== -->
+  <section class="section" id="planos">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">PLANOS</span>
+        <h2 class="heading-lg">COMECE SUA<br><em>TRANSFORMA&Ccedil;&Atilde;O.</em></h2>
+      </div>
+      <div class="plans" data-reveal-stagger>
+        <div class="plan">
+          <h3>EVOLU&Ccedil;&Atilde;O</h3>
+          <p class="plan__tag">Para quem quer come&ccedil;ar</p>
+          <ul>
+            <li>Muscula&ccedil;&atilde;o completa</li>
+            <li>Funcional</li>
+            <li>Acompanhamento profissional</li>
+            <li>&Aacute;rea Kids inclusa</li>
+            <li>Acesso a uma unidade</li>
+          </ul>
+          <a href="https://wa.me/5517997746465?text=Quero%20saber%20sobre%20o%20plano%20Evolu%C3%A7%C3%A3o" class="btn btn--ghost btn--full" target="_blank" rel="noopener"><span>FALAR COM CONSULTOR</span></a>
+        </div>
+        <div class="plan plan--featured">
+          <div class="plan__popular">MAIS POPULAR</div>
+          <h3>PERFORMANCE</h3>
+          <p class="plan__tag">Para quem busca o pr&oacute;ximo n&iacute;vel</p>
+          <ul>
+            <li>Todas as modalidades</li>
+            <li>Muscula&ccedil;&atilde;o + Funcional + Lutas</li>
+            <li>Spinner, Jump, Dan&ccedil;a, Pilates</li>
+            <li>&Aacute;rea Kids inclusa</li>
+            <li>Acesso a todas as unidades</li>
+          </ul>
+          <a href="https://wa.me/5517997746465?text=Quero%20saber%20sobre%20o%20plano%20Performance" class="btn btn--glow btn--full" target="_blank" rel="noopener"><span>FALAR COM CONSULTOR</span></a>
+        </div>
+        <div class="plan">
+          <h3>ELITE</h3>
+          <p class="plan__tag">Para quem n&atilde;o aceita limites</p>
+          <ul>
+            <li>Tudo do Performance</li>
+            <li>Prep. f&iacute;sica para atletas</li>
+            <li>Acompanhamento personalizado</li>
+            <li>Prioridade em hor&aacute;rios</li>
+            <li>Acesso a todas as unidades</li>
+          </ul>
+          <a href="https://wa.me/5517997746465?text=Quero%20saber%20sobre%20o%20plano%20Elite" class="btn btn--ghost btn--full" target="_blank" rel="noopener"><span>FALAR COM CONSULTOR</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 9. FAQ ===== -->
+  <section class="section section--alt" id="faq">
+    <div class="container container--sm">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">D&Uacute;VIDAS</span>
+        <h2 class="heading-lg">PERGUNTAS <em>FREQUENTES.</em></h2>
+      </div>
+      <div class="faq-list" data-reveal-stagger>
+        <div class="faq">
+          <button class="faq__q"><span>Como funciona a matr&iacute;cula?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>A matr&iacute;cula pode ser feita presencialmente em qualquer unidade ou iniciada pelo WhatsApp. Oferecemos planos semestrais e anuais com acesso a todas as modalidades.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Quais s&atilde;o os hor&aacute;rios de funcionamento?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Seg a Sex das 05h &agrave;s 23h e S&aacute;b das 08h &agrave;s 13h. Ambas as unidades seguem os mesmos hor&aacute;rios.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Posso fazer uma aula experimental?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Sim! Oferecemos aula experimental gratuita. Agende pelo WhatsApp ou visite uma de nossas unidades.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Quais modalidades est&atilde;o inclu&iacute;das?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Depende do plano. O Evolu&ccedil;&atilde;o inclui muscula&ccedil;&atilde;o e funcional. O Performance d&aacute; acesso a tudo. O Elite soma acompanhamento personalizado.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Como funciona a &Aacute;rea Kids?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Espa&ccedil;o seguro e supervisionado onde seus filhos brincam enquanto voc&ecirc; treina. Dispon&iacute;vel em ambas as unidades.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Qual a diferen&ccedil;a entre as unidades?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Ambas oferecem a mesma experi&ecirc;ncia premium com estrutura completa e todas as modalidades. A diferen&ccedil;a &eacute; apenas a localiza&ccedil;&atilde;o.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Preciso de experi&ecirc;ncia para come&ccedil;ar?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>N&atilde;o! Nossa equipe atende desde iniciantes at&eacute; atletas avan&ccedil;ados com acompanhamento personalizado.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq__q"><span>Como cancelar ou trocar de plano?</span><span class="faq__icon"></span></button>
+          <div class="faq__a"><p>Entre em contato pelo WhatsApp ou visite a recep&ccedil;&atilde;o de qualquer unidade. Processo r&aacute;pido e transparente.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 10. FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__glow"></div>
+    <div class="container">
+      <div class="footer__cta" data-reveal>
+        <h2 class="heading-xl">PRONTO PARA SER<br><em>FORJADO?</em></h2>
+        <a href="https://wa.me/5517997746465?text=Quero%20me%20matricular%20na%20Cave%20Gym" class="btn btn--glow btn--lg" target="_blank" rel="noopener"><span>FALAR NO WHATSAPP</span></a>
+      </div>
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__logo"><span class="logo-c">CAVE</span><span class="logo-g">GYM</span></div>
+          <p class="footer__tagline">Onde o novo voc&ecirc; &eacute; forjado.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/cavegymcatanduva" target="_blank" rel="noopener" aria-label="Instagram Catanduva">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/cavegymtaquaritinga" target="_blank" rel="noopener" aria-label="Instagram Taquaritinga">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Navega&ccedil;&atilde;o</h4>
+          <a href="#marca">A Cave</a>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#modalidades">Modalidades</a>
+          <a href="#estrutura">Estrutura</a>
+          <a href="#planos">Planos</a>
+        </div>
+        <div class="footer__col">
+          <h4>Catanduva</h4>
+          <p>Av. Dep. Orlando Zancaner, 1051<br>Jardim Am&ecirc;ndola</p>
+          <p>(17) 99774-6465</p>
+          <p>Seg-Sex 05h-23h | S&aacute;b 08h-13h</p>
+        </div>
+        <div class="footer__col">
+          <h4>Taquaritinga</h4>
+          <p>Rua General Os&oacute;rio, 444<br>Centro</p>
+          <p>(17) 99774-6465</p>
+          <p>Seg-Sex 05h-23h | S&aacute;b 08h-13h</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Cave Gym. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5517997746465?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Cave%20Gym" class="wpp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

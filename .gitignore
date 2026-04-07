@@ -1,0 +1,8 @@
+node_modules/
+.superpowers/
+package-lock.json
+upscale.html
+assets/images/*.webp
+assets/images/*.jpg
+assets/images/*-hq.jpg
+assets/images/hero-hq.png~*
