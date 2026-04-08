@@ -1209,6 +1209,21 @@ body.cursor-hover .cursor-follower {
   color: var(--gray-dark);
 }
 
+.footer-dev {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.footer-dev a {
+  color: var(--gray-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-dev a:hover {
+  color: var(--red);
+}
+
 
 /* ===== WHATSAPP FLOAT ===== */
 .wpp-float {
